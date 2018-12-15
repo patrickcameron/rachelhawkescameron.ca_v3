@@ -15,7 +15,7 @@ class IndexPage extends React.Component {
 
                 <div className="site-intro grid">
                     <img className="site-intro__img" src={bannerImg} alt="" />
-                    <h1 className="site-intro__text"><strong>Rachel Hawkes Cameron</strong><br/> painter and illustrator<br/> from Hamilton, Canada.</h1>
+                    <h1 className="site-intro__text"><strong>Rachel Hawkes Cameron</strong><br/> is a painter and illustrator<br/> from Hamilton, Canada.</h1>
                 </div>
 
                 <div className="painting-preview-wrapper">
