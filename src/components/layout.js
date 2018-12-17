@@ -35,6 +35,7 @@ class Layout extends React.Component {
                 meta={[
                     { name: 'description', content: metaData.description },
                     { name: 'keywords', content: 'Hamilton painter, Hamilton illustrator, Toronto painter, Toronto illustrator' },
+                    { name: 'google-site-verification',  content: 'PuWXzRCsyekukWviRC8ttBgo70TTY5YCJW9jeqkus-Y' },
                 ]}
                 >
                 <html lang="en" />
