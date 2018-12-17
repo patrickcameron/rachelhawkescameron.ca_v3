@@ -25,6 +25,7 @@ if (!spaceId || !accessToken) {
 
 module.exports = {
   siteMetadata: {
+    siteUrl: 'https://rachelhawkescameron.com',
     title: 'Rachel Hawkes Cameron',
   },
   plugins: [
@@ -44,6 +45,7 @@ module.exports = {
     'gatsby-transformer-remark', // Load after gatsby-source-contentful
     'gatsby-transformer-sharp',
     'gatsby-plugin-sass',
+    'gatsby-plugin-sitemap',
     'gatsby-plugin-sharp',
     {
       resolve: `gatsby-plugin-manifest`,
