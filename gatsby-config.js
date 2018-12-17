@@ -1,3 +1,6 @@
+//
+// 1. Grab Contentful API keys from Netlify environment variables or local .env file
+//
 require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 })
@@ -23,6 +26,9 @@ if (!spaceId || !accessToken) {
   )
 }
 
+//
+// 2. Set up plugins
+//
 module.exports = {
   siteMetadata: {
     siteUrl: 'https://rachelhawkescameron.com',

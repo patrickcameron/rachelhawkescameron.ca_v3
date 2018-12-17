@@ -1,6 +1,7 @@
 import React, { Component} from 'react';
 import PropTypes from 'prop-types';
 import { graphql, Link } from 'gatsby';
+import Helmet from 'react-helmet'
 import Img from 'gatsby-image'
 import Layout from '../components/layout';
 
@@ -9,11 +10,19 @@ class PaintingPost extends Component {
     render() {
         const { prev, next } = this.props.pageContext
         const { name, description, images, etsyUrl } = this.props.data.contentfulPainting
-        const metaData = { title: name, description: description.description }
 
         return (
 
-            <Layout metaData={metaData}>
+            <Layout>
+
+                <Helmet
+                    title={`${name} - Rachel Hawkes Cameron`}
+                    meta={[
+                        { name: 'description', content: description.description },
+                        { name: 'og:image', content: 'https:' + images[0].src }
+                    ]}
+                    >
+                </Helmet>
 
                 <article className="painting">
 

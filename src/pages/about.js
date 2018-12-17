@@ -1,5 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
+import Helmet from 'react-helmet'
 import Img from 'gatsby-image'
 import Layout from '../components/layout'
 
@@ -7,10 +8,18 @@ class AboutPage extends React.Component {
 
     render() {
         const { name, bio, portrait } = this.props.data.contentfulAboutPage
-        const metaData = { title: 'About', description: bio.bio.substr(0, 200) }
 
         return (
-            <Layout metaData={metaData}>
+            <Layout>
+
+                <Helmet
+                    title="About - Rachel Hawkes Cameron"
+                    meta={[
+                        { name: 'description', content: bio.bio.substr(0,200) + '...' },
+                        { name: 'og:image', content: 'https:' + portrait.fluid.src }
+                    ]}
+                    >
+                </Helmet>
 
                 <article className="about-page grid">
                     <figure className="about-page__image">
