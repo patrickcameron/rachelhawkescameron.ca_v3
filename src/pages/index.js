@@ -15,7 +15,7 @@ class IndexPage extends React.Component {
 
                 <div className="site-intro grid">
                     <img className="site-intro__img" src={bannerImg} alt="" />
-                    <div class="site-intro__text">
+                    <div className="site-intro__text">
                         <h1>Rachel Hawkes Cameron</h1>
                         <h2>is a painter and illustrator<br/> from Hamilton, Canada.</h2>
                     </div>
@@ -41,9 +41,7 @@ export default IndexPage
 export const pageQuery = graphql`
     query pageQuery
     {
-        allContentfulPainting (
-            filter: { createdAt: {ne: null} }
-        ){
+        allContentfulPainting(sort: { fields: [createdAt], order: DESC }){
             edges {
                 node {
                     id
@@ -51,19 +49,14 @@ export const pageQuery = graphql`
                     slug
                     isSold
                     images {
-                        fluid {
+                        title
+                        fluid(maxWidth: 768) {
                             aspectRatio
                             src
                             srcSet
                             sizes
-                        }
-                        file {
-                            url
-                        }
-                    }
-                    description {
-                        childMarkdownRemark {
-                            html
+                            srcWebp
+                            srcSetWebp
                         }
                     }
                 }

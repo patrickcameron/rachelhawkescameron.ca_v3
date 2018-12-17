@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import Img from 'gatsby-image'
 
 class PaintingPreview extends React.Component {
 
@@ -12,7 +13,7 @@ class PaintingPreview extends React.Component {
                     <div className="painting-preview__is-sold-badge"><p>SOLD</p></div> : null
                 }
                 <div className="painting-preview__image">
-                    <img src={`https:${images[0].file.url}?w=1000&fit=pad&q=80`} alt="" />
+                    <Img fluid={images[0].fluid} alt={images[0].title} />
                 </div>
                 <div className="painting-preview__details">
                     <p>{name}</p>

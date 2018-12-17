@@ -7,9 +7,10 @@ class AboutPage extends React.Component {
 
     render() {
         const { name, bio, portrait } = this.props.data.contentfulAboutPage
+        const metaData = { title: 'About', description: bio.bio.substr(0, 200) }
 
         return (
-            <Layout>
+            <Layout metaData={metaData}>
 
                 <article className="about-page grid">
                     <figure className="about-page__image">
@@ -35,6 +36,7 @@ export const pageQuery = graphql `
     contentfulAboutPage {
         name
         bio {
+            bio
             childMarkdownRemark {
                 html
             }
@@ -42,6 +44,7 @@ export const pageQuery = graphql `
         portrait {
             fluid(quality: 90, maxWidth: 580) {
                 aspectRatio
+                sizes
                 src
                 srcSet
                 srcWebp

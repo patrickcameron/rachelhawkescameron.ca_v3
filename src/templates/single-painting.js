@@ -9,10 +9,11 @@ class PaintingPost extends Component {
     render() {
         const { prev, next } = this.props.pageContext
         const { name, description, images, etsyUrl } = this.props.data.contentfulPainting
+        const metaData = { title: name, description: description.description }
 
         return (
 
-            <Layout>
+            <Layout metaData={metaData}>
 
                 <article className="painting">
 
@@ -75,6 +76,7 @@ export const pageQuery = graphql`
         contentfulPainting(slug: {eq: $slug}) {
             name
             description {
+                description
                 childMarkdownRemark {
                     html
                 }

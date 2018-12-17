@@ -14,12 +14,26 @@ class Layout extends React.Component {
     render() {
         const { children, isHome } = this.props
 
+        // Set up page meta data
+        let metaData
+
+        if ( this.props.metaData ) {
+            metaData = this.props.metaData
+            metaData.title += ' - Rachel Hawkes Cameron'
+        }
+        else {
+            metaData = {
+                title: "Rachel Hawkes Cameron",
+                description: "Painter and illustrator from Hamilton, Canada."
+            }
+        }
+
         return (
             <>
                 <Helmet
-                title="Rachel Hawkes Cameron"
+                title={metaData.title}
                 meta={[
-                    { name: 'description', content: 'Painter and illustrator from Hamilton, Canada.' },
+                    { name: 'description', content: metaData.description },
                     { name: 'keywords', content: 'Hamilton painter, Hamilton illustrator, Toronto painter, Toronto illustrator' },
                 ]}
                 >

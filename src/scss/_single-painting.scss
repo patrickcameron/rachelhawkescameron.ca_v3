@@ -28,7 +28,7 @@ article.painting {
 
     p {
         color: var( --color--dark-blue );
-        font-size: 16px;
+        font-size: 20px;
         line-height: 1.8;
         margin-bottom: 1em;
         font-weight: 300;
@@ -38,7 +38,7 @@ article.painting {
         grid-column: 2/11;
 
         p {
-            font-size: 16px;
+            font-size: 30px;
         }
     }
 }
@@ -50,7 +50,7 @@ article.painting {
 
     a {
         border-bottom: 1px solid;
-        font-size: 16px;
+        font-size: 20px;
         font-weight: 300;
 
     }
@@ -60,7 +60,7 @@ article.painting {
         margin-bottom: 1.4em;
 
         a {
-            font-size: 16px;
+            font-size: 30px;
         }
     }
 
@@ -92,8 +92,8 @@ article.painting {
             &.prev-link {
                 &:before {
                     content: "\2190";
+                    color: var( --color--dark-blue );
                     margin-right: 10px;
-                    font-family: $lato-font;
                     font-size: 14px;
                 }
             }
@@ -104,8 +104,8 @@ article.painting {
 
                 &:after {
                     content: "\2192";
+                    color: var( --color--dark-blue );
                     margin-left: 10px;
-                    font-family: $lato-font;
                     font-size: 14px;
                 }
             }
