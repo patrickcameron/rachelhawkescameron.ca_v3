@@ -8,7 +8,7 @@ exports.createPages = ({ graphql, actions }) => {
         resolve(
             graphql(`
                 {
-                  allContentfulPainting {
+                  allContentfulPainting(sort: { fields: [createdAt], order: DESC }){
                     edges {
                       node {
                         name
