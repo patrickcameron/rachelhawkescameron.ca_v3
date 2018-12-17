@@ -17,17 +17,23 @@ class PaintingPost extends Component {
                 <article className="painting">
 
                     <div className="painting__header grid">
+
+                        {/* Title */}
                         <h1><strong>{name}</strong></h1>
+
+                        {/* Description */}
+                        <div className="painting__description" dangerouslySetInnerHTML={{__html: description.childMarkdownRemark.html }} />
+
+                        {/* Etsy Link */}
                         { etsyUrl &&
                             <span className="painting__for-sale-link">
-                                <a  href={etsyUrl}
-                                    target="_blank"
-                                    rel="noopener noreferrer">
-                                        For Sale on Etsy
-                                </a>
+                            <a  href={etsyUrl}
+                            target="_blank"
+                            rel="noopener noreferrer">
+                            For Sale on Etsy
+                            </a>
                             </span>
                         }
-                        <div className="painting__description" dangerouslySetInnerHTML={{__html: description.childMarkdownRemark.html }} />
                     </div>
 
                     <div className="painting__details grid">
@@ -42,12 +48,12 @@ class PaintingPost extends Component {
                     <ul>
                         { ( prev && prev.node ) &&
                             <li className="prev-link">
-                                <Link to={prev.node.slug}>← {prev.node.name}</Link>
+                                <Link to={prev.node.slug}>{prev.node.name}</Link>
                             </li>
                         }
                         { ( next && next.node ) &&
                             <li className="next-link">
-                                <Link to={next.node.slug}>{next.node.name} →</Link>
+                                <Link to={next.node.slug}>{next.node.name}</Link>
                             </li>
                         }
                     </ul>
