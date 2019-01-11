@@ -16,19 +16,22 @@ class AboutPage extends React.Component {
                     title="About - Rachel Hawkes Cameron"
                     meta={[
                         { name: 'description', content: bio.bio.substr(0,200) + '...' },
+                        { name: 'author', content: 'Rachel Hawkes Cameron' },
+                        { name: 'article:publisher', content: 'https://www.instagram.com/rachelhawkescameronart/' },
+                        { name: 'og-type', content: 'article' },
                         { name: 'og:image', content: 'https:' + portrait.fluid.src }
                     ]}
                     >
                 </Helmet>
 
-                <article className="about-page grid">
+                <article className="about-page grid" itemScope itemType="http://schema.org/AboutPage">
                     <figure className="about-page__image">
-                        <Img fluid={ portrait.fluid } alt="Portrait of Rachel Hawkes Cameron" />
+                        <Img itemProp="image" fluid={ portrait.fluid } alt="Portrait of Rachel Hawkes Cameron" />
                     </figure>
 
                     <div className="about-page__text">
-                        <h1><strong>{ name }</strong></h1>
-                        <span dangerouslySetInnerHTML={{ __html: bio.childMarkdownRemark.html }}></span>
+                        <h1 itemprop="name"><strong>{ name }</strong></h1>
+                        <span itemProp="text" dangerouslySetInnerHTML={{ __html: bio.childMarkdownRemark.html }}></span>
                     </div>
                 </article>
 

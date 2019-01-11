@@ -6,10 +6,10 @@ import Header from './header'
 import Footer from './footer'
 
 import '../scss/layout.scss'
-
 import bannerImg from '../images/rachel_hawkes_cameron_art.jpg'
 
 require('typeface-lato')
+
 
 class Layout extends React.Component {
 
@@ -21,8 +21,8 @@ class Layout extends React.Component {
                 <Helmet
                 title="Rachel Hawkes Cameron"
                 meta={[
-                    { name: 'description', content: "Painter and illustrator from Hamilton, Canada" },
-                    { name: 'keywords', content: 'Hamilton painter, Hamilton illustrator, Toronto painter, Toronto illustrator' },
+                    { name: 'description', content: "Rachel Hawkes Cameron is a painter and illustrator from Hamilton, Canada." },
+                    { name: 'keywords', content: 'Hamilton painter, Hamilton illustrator, Toronto painter, Toronto illustrator, Canadian artist, Canadian painter' },
                     { name: 'google-site-verification',  content: 'PuWXzRCsyekukWviRC8ttBgo70TTY5YCJW9jeqkus-Y' },
                     { name: 'og:image', content: bannerImg },
                 ]}

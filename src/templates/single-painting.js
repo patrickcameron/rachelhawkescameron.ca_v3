@@ -24,15 +24,15 @@ class PaintingPost extends Component {
                     >
                 </Helmet>
 
-                <article className="painting">
+                <article className="painting" itemScope itemType="http://schema.org/Painting">
 
                     <div className="painting__header grid">
 
                         {/* Title */}
-                        <h1><strong>{name}</strong></h1>
+                        <h1 itemProp="name"><strong>{name}</strong></h1>
 
                         {/* Description */}
-                        <div className="painting__description" dangerouslySetInnerHTML={{__html: description.childMarkdownRemark.html }} />
+                        <div className="painting__description" itemProp="text" dangerouslySetInnerHTML={{__html: description.childMarkdownRemark.html }} />
 
                         {/* Etsy Link */}
                         { etsyUrl &&
@@ -48,7 +48,7 @@ class PaintingPost extends Component {
 
                     <div className="painting__details grid">
                         {images.map((image, i) => (
-                            <Img fluid={image.fluid} key={i} />
+                            <Img itemProp="image" fluid={image.fluid} key={i} />
                         ))}
                     </div>
 
