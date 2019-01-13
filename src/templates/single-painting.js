@@ -9,7 +9,7 @@ class PaintingPost extends Component {
 
     render() {
         const { prev, next } = this.props.pageContext
-        const { name, description, images, etsyUrl } = this.props.data.contentfulPainting
+        const { name, description, images, etsyUrl, isSold } = this.props.data.contentfulPainting
 
         return (
 
@@ -35,7 +35,7 @@ class PaintingPost extends Component {
                         <div className="painting__description" itemProp="text" dangerouslySetInnerHTML={{__html: description.childMarkdownRemark.html }} />
 
                         {/* Etsy Link */}
-                        { etsyUrl &&
+                        { ( etsyUrl && !isSold ) &&
                             <span className="painting__for-sale-link">
                             <a  href={etsyUrl}
                             target="_blank"
@@ -104,6 +104,7 @@ export const pageQuery = graphql`
                 }
             }
             etsyUrl
+            isSold
         }
     }
 `
