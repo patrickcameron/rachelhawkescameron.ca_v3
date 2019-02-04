@@ -144,7 +144,7 @@ body {
     }
 
     @media screen and (min-width: $desktop) {
-        padding: 120px var( --column-width );
+        padding: 150px var( --column-width );
 
         .site-intro__img {
             grid-column: 1/8;
@@ -152,9 +152,10 @@ body {
 
         .site-intro__text {
             grid-column: unset;
-            right: 7%;
+            right: 5%;
             position: absolute;
-            bottom: 20%;
+            bottom: 16%;
+            max-width: 328px;
         }
     }
 }
