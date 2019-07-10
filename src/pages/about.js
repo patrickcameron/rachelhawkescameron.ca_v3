@@ -30,7 +30,7 @@ class AboutPage extends React.Component {
                     </figure>
 
                     <div className="about-page__text">
-                        <h1 itemprop="name"><strong>{ name }</strong></h1>
+                        <h1 itemProp="name"><strong>{ name }</strong></h1>
                         <span itemProp="text" dangerouslySetInnerHTML={{ __html: bio.childMarkdownRemark.html }}></span>
                     </div>
                 </article>

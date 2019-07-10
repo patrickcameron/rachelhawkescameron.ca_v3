@@ -29,8 +29,8 @@ class CommissionsPage extends React.Component {
                     </figure>
 
                     <div className="about-page__text">
-                        <h1 itemprop="name"><strong>Commissions</strong></h1>
-                        <span itemprop="text" dangerouslySetInnerHTML={{ __html: introText.childMarkdownRemark.html }}></span>
+                        <h1 itemProp="name"><strong>Commissions</strong></h1>
+                        <span itemProp="text" dangerouslySetInnerHTML={{ __html: introText.childMarkdownRemark.html }}></span>
                         <form name="contact" method="POST" data-netlify="true">
                             <p><label>Your Name <input type="text" name="name"  required/></label></p>
                             <p><label>Your Email <input type="email" name="email"  required/></label></p>
