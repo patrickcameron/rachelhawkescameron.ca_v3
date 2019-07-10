@@ -58,12 +58,12 @@ class PaintingPost extends Component {
                     <ul>
                         { ( prev && prev.node ) &&
                             <li className="prev-link">
-                                <Link to={prev.node.slug}>{prev.node.name}</Link>
+                                <Link to={`/${prev.node.slug}`}>{prev.node.name}</Link>
                             </li>
                         }
                         { ( next && next.node ) &&
                             <li className="next-link">
-                                <Link to={next.node.slug}>{next.node.name}</Link>
+                                <Link to={`/${next.node.slug}`}>{next.node.name}</Link>
                             </li>
                         }
                     </ul>

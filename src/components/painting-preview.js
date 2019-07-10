@@ -8,7 +8,7 @@ class PaintingPreview extends React.Component {
         const {id, slug, name, images, isSold} = this.props.paintingData
 
         return (
-            <Link className="painting-preview" to={slug} key={id}>
+            <Link className="painting-preview" to={`/${slug}`} key={id}>
                 { isSold ?
                     <div className="painting-preview__is-sold-badge"><p>SOLD</p></div> : null
                 }
