@@ -52,6 +52,10 @@ body {
         transition: 0.3s all ease-out;
         white-space: nowrap;
 
+        &.is-current-page {
+            font-weight: bold;
+        }
+
         &:hover {
             border-bottom: 1px solid var( --color--dark-blue );
             color: var( --color--dark-blue );

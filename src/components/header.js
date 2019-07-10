@@ -3,6 +3,19 @@ import { Link } from 'gatsby'
 
 class Header extends React.Component {
 
+    componentDidMount() {
+        const navMenu = document.getElementById('js--header-nav');
+        const navMenuLinks = Object.values( navMenu.getElementsByTagName('a') );
+
+        navMenuLinks.forEach( link => {
+            if ( window.location.pathname === link.getAttribute('href') ) {
+                link.classList.add('is-current-page');
+            } else {
+                link.classList.remove('is-current-page');
+            }
+        } );
+    }
+
     render() {
         const isHome = this.props.isHome
 
@@ -13,7 +26,7 @@ class Header extends React.Component {
                 { !isHome && <Link to="/">Rachel Hawkes Cameron</Link> }
 
                 <nav>
-                    <ul>
+                    <ul id="js--header-nav">
                         { !isHome && <li className="home-link"><Link to="/">Home</Link></li> }
                         <li><Link to="/about">About</Link></li>
                         <li><a href="/commissions">Commissions</a></li>
