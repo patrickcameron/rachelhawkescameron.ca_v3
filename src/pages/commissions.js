@@ -31,13 +31,13 @@ class CommissionsPage extends React.Component {
                     <div className="about-page__text">
                         <h1 itemProp="name"><strong>Commissions</strong></h1>
                         <span itemProp="text" dangerouslySetInnerHTML={{ __html: introText.childMarkdownRemark.html }}></span>
-                        <form name="contact" method="POST" data-netlify="true">
-                            <p><label>Your Name <input type="text" name="name"  required/></label></p>
-                            <p><label>Your Email <input type="email" name="email"  required/></label></p>
+                        <form name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
+                            <p><label>Your Name <input type="text" name="name" required/></label></p>
+                            <p><label>Your Email <input type="email" name="email" required/></label></p>
                             <p><label>Size of Piece <input type="text" name="sizeofpiece" /></label></p>
                             <p><label>Budget Range <input type="text" name="budgetrange" /></label></p>
                             <p><label>Description <textarea name="message" required></textarea></label></p>
-                            <p><button type="submit">Send</button></p>
+                            <p><input type="submit" value="Send" /></p>
                         </form>
                     </div>
                 </article>

@@ -257,7 +257,6 @@ body {
 
         form {
 
-            button,
             input,
             textarea {
                 display: block;
@@ -274,17 +273,17 @@ body {
                 }
             }
 
-            button {
-                font-weight: bold;
-                height: 40px;
-                padding: 0 14px;
-                width: auto;
-            }
-
             input {
                 height: 40px;
                 padding: 0 14px;
                 width: 100%;
+            }
+
+            input[type="submit"] {
+                font-weight: bold;
+                height: 40px;
+                padding: 0 14px;
+                width: auto;
             }
 
             textarea {
