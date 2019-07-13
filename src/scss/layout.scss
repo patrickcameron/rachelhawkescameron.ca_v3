@@ -228,6 +228,26 @@ body {
     padding-top: 60px;
     padding-bottom: 20px;
 
+    #success-message {
+        grid-column: 1/12;
+        text-align: center;
+        padding: 12px 20px;
+        margin: -45px 0 40px;
+        color: #155724;
+        background-color: #d4edda;
+        border: 1px solid #c3e6cb;
+        border-radius: 4px;
+
+        display: none;
+        opacity: 0;
+        transition: opacity 1s;
+
+        &.is-visible {
+            display: block;
+            opacity: 1;
+        }
+    }
+
     .about-page__image {
         grid-column: 1/12;
         margin-bottom: 34px;
