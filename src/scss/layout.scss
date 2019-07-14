@@ -230,21 +230,22 @@ body {
 
     #success-message {
         grid-column: 1/12;
+        width: 520px;
+        max-width: 100%;
         text-align: center;
-        padding: 12px 20px;
-        margin: -45px 0 40px;
+        padding: 42px 20px;
+        margin: 40px auto;
         color: #155724;
         background-color: #d4edda;
         border: 1px solid #c3e6cb;
         border-radius: 4px;
 
-        display: none;
-        opacity: 0;
-        transition: opacity 1s;
+        p + p {
+            margin-top: 14px;
+        }
 
-        &.is-visible {
-            display: block;
-            opacity: 1;
+        a:hover {
+            text-decoration: underline;
         }
     }
 

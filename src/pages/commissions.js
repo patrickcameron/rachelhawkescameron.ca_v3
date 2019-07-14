@@ -20,13 +20,6 @@ class CommissionsPage extends React.Component {
         this.state = { isValidated: false }
     }
 
-    componentDidMount() {
-        if ( this.props.location.search.substring(1) === 'success=true' ) {
-            console.log( this.props.location.search.substring(1) );
-            document.getElementById( 'success-message' ).classList.add('is-visible');
-        };
-    }
-
     handleChange = e => {
         this.setState({ [e.target.name]: e.target.value })
     }
@@ -66,10 +59,6 @@ class CommissionsPage extends React.Component {
 
                 <article className="about-page grid" itemScope itemType="http://schema.org/ContactPage">
 
-                    <div id="success-message">
-                        <p><strong>Success!</strong> Your message has been sent.</p>
-                    </div>
-
                     <figure className="about-page__image">
                         <Img itemProp="image" fluid={ photo.fluid } alt="Custom Paintings by Rachel Hawkes Cameron" />
                     </figure>
@@ -83,7 +72,7 @@ class CommissionsPage extends React.Component {
                             id="contact-form"
                             name="contact"
                             method="post"
-                            action="/commissions/?success=true"
+                            action="/commissions-success"
                             data-netlify="true"
                             data-netlify-honeypot="bot-field"
                             onSubmit={this.handleSubmit}>
