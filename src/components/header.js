@@ -30,7 +30,7 @@ class Header extends React.Component {
                         { !isHome && <li className="home-link"><Link to="/">Home</Link></li> }
                         <li><Link to="/about">About</Link></li>
                         <li><a href="/commissions">Commissions</a></li>
-                        <li><a href="mailto:rachelcameron@gmail.com">Contact</a></li>
+                        <li><a href="mailto:hello@rachelhawkescameron.com">Contact</a></li>
                         <li><a href="https://www.etsy.com/ca/shop/rachelhawkescameron" target="_blank" rel="noopener noreferrer">Etsy</a></li>
                         <li><a href="https://www.instagram.com/rachelhawkescameronart/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
                     </ul>
