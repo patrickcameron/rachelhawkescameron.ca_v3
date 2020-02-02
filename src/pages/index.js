@@ -2,7 +2,7 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../components/layout'
 import PaintingPreview from '../components/painting-preview'
-import bannerImg from '../images/rachel_hawkes_cameron_art.jpg'
+import bannerImg from '../images/rachel_hawkes_cameron.jpg'
 
 class IndexPage extends React.Component {
 

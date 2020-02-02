@@ -6,7 +6,7 @@ import Header from './header'
 import Footer from './footer'
 
 import '../scss/layout.scss'
-import bannerImg from '../images/rachel_hawkes_cameron_art.jpg'
+import bannerImg from '../images/rachel_hawkes_cameron.jpg'
 
 require('typeface-lato')
 

@@ -111,7 +111,7 @@ body {
     .site-intro__img {
         grid-column: 1/12;
         position: relative;
-        padding-bottom: 100%;
+        padding-bottom: 150%;
 
         img {
             position: absolute;
@@ -144,7 +144,7 @@ body {
             margin-top: 30px;
 
             h1, h2 {
-                font-size: 44px;
+                font-size: 40px;
             }
 
             br {
@@ -163,10 +163,10 @@ body {
 
         .site-intro__text {
             grid-column: unset;
-            right: 5%;
+            right: 0;
             position: absolute;
             bottom: 16%;
-            max-width: 328px;
+            max-width: 448px;
         }
     }
 }
